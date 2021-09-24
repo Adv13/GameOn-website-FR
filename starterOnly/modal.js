@@ -20,4 +20,33 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+// close modal form
+function closeModal(){
+  modalbg.style.display = "none";
+}
+
+// close with 'Escape' key
+function escapeModal(e) {
+  if (e.key === 'Escape' && modalbg.style.display === "block") {
+    closeModal();
+  }
+}
+
+document.addEventListener('keydown', escapeModal);
+
+
+
+//close with click button
+function closeModalClick() {
+  if (modalbg.style.display = "block") {
+      modalbg.style.display = "none";
+  };
+
+}
+
+document.querySelectorAll('.close').forEach(elem => {
+  elem.onclick = closeModalClick;
+});
+
+
 
