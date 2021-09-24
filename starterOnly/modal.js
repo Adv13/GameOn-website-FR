@@ -34,8 +34,6 @@ function escapeModal(e) {
 
 document.addEventListener('keydown', escapeModal);
 
-
-
 //close with click button
 function closeModalClick() {
   if (modalbg.style.display = "block") {
@@ -49,4 +47,4 @@ document.querySelectorAll('.close').forEach(elem => {
 });
 
 
-
+// test de commit 2
