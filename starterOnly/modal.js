@@ -92,8 +92,3 @@ document.querySelectorAll('.close').forEach(elem => {
             //define tournament format
           const tournamentNrFormat = /\d+/g;
          }
-
-         //test 2
-
-         //test 3
-         
