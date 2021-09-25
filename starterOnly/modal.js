@@ -31,20 +31,16 @@ function escapeModal(e) {
     closeModal();
   }
 }
-
 document.addEventListener('keydown', escapeModal);
 
 //close with click button
-function closeModalClick() {
-  if (modalbg.style.display = "block") {
-      modalbg.style.display = "none";
-  };
-
-}
-
 document.querySelectorAll('.close').forEach(elem => {
-  elem.onclick = closeModalClick;
+  elem.onclick = closeModal;
 });
 
 
-// test de commit 2
+// (1) Le champ Prénom a un minimum de 2 caractères / n'est pas vide.
+// (2) Le champ du nom de famille a un minimum de 2 caractères / n'est pas vide.
+// (3) L'adresse électronique est valide.
+// (4) Pour le nombre de concours, une valeur numérique est saisie.
+
