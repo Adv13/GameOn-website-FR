@@ -89,5 +89,8 @@ document.querySelectorAll('.close').forEach(elem => {
             //define email format
           const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         
-            //define tournamentNr format
+            //define tournament format
           const tournamentNrFormat = /\d+/g;
+         }
+
+         //test 2
