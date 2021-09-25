@@ -44,3 +44,50 @@ document.querySelectorAll('.close').forEach(elem => {
 // (3) L'adresse électronique est valide.
 // (4) Pour le nombre de concours, une valeur numérique est saisie.
 
+// Form validation
+
+    // Retrieve nodes for validation
+
+      // firstname
+      const firstName = document.querySelector('#first');
+      const divPrenom = document.querySelector('#divPrenom');
+            // lastname
+      const lastName = document.querySelector('#last');
+      const divNom = document.querySelector('#divNom');
+            //email
+      const email = document.querySelector('#email');
+      const divEmail = document.querySelector('#divEmail');
+            // birthdate 
+      const birthDate = document.querySelector('#birthdate');
+      const divBirthdate = document.querySelector('#divBirthdate');
+            // nbre of tournaments
+      const tournamentNr = document.querySelector('#quantity');
+      const divTournament = document.querySelector('#divTournament');
+            // cities
+      const radios = document.getElementsByName('location');
+      const checkboxDiv = document.querySelector('#divLocation');
+            // terms of use
+      const checkbox1 = document.querySelector("#checkbox1");
+      const divCheckbox1 = document.querySelector('#divCheckbox1');
+      
+      
+      
+         // Manage form submission
+      
+         document.querySelector('form').addEventListener('submit', e =>{
+          e.preventDefault();
+      
+          //add a counter to check each form input
+          let counter = 0;
+        
+            // Validation conditions
+        
+              // input values does not accept blanks
+          const firstNameValue = firstName.value.trim();
+          const lastNameValue = lastName.value.trim();
+        
+            //define email format
+          const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        
+            //define tournamentNr format
+          const tournamentNrFormat = /\d+/g;
