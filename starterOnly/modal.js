@@ -81,7 +81,7 @@ document.querySelectorAll('.close').forEach(elem => {
     //add a counter to check each form input
     let counter = 0;
         
-    // Validation conditions
+    // Validation and conditions
         
     // input values dont accept blanks
     const firstNameValue = firstName.value.trim();
@@ -95,7 +95,7 @@ document.querySelectorAll('.close').forEach(elem => {
       
     // AJOUTER MESSAGE DE VALIDATION OU D'ERREUR : ISSUE 3
     // check firstname
-    if(firstNameValue.length <2){
+    if(firstNameValue.length <=1){
       divPrenom.setAttribute('data-error', 'Merci d\'écrire 2 caractères minimum.');
       divPrenom.setAttribute('data-error-visible', 'true');
     } else {
@@ -103,7 +103,7 @@ document.querySelectorAll('.close').forEach(elem => {
       counter++;
     }
     // check lastname
-    if(lastNameValue.length <2){
+    if(lastNameValue.length <=1){
       divNom.setAttribute('data-error', 'Merci d\'écrire 2 caractères minimum.');
       divNom.setAttribute('data-error-visible', 'true');
     } else {
@@ -115,7 +115,7 @@ document.querySelectorAll('.close').forEach(elem => {
       divEmail.setAttribute('data-error-visible', 'false');
       counter++;
     } else {
-      divEmail.setAttribute('data-error', 'Merci d\'écrire une adresse mail valide.');
+      divEmail.setAttribute('data-error', 'Merci d\'écrire une adresse email valide.');
       divEmail.setAttribute('data-error-visible', 'true');
     }
     // check date
@@ -159,14 +159,14 @@ document.querySelectorAll('.close').forEach(elem => {
 
     // AJOUTER UNE CONFIRMATION QUAND L'ENVOIE DU FORMULAIRE EST REUSSI : ISSUE 4
 
-    const bgrounDiv = document.querySelector(".bground");
-    const successDiv = document.querySelector("#success-div");
-    const closeSuccess = document.querySelector(".close-success-div")
+    const divBground = document.querySelector(".bground");
+    const divSuccess = document.querySelector("#divSuccess");
+    const closeSuccess = document.querySelector(".divCloseSuccess")
     // close modal form
     closeSuccess.addEventListener('click', successCrossClose);
 
     function successCrossClose() {
-      successDiv.style.display = "none";
+      divSuccess.style.display = "none";
     }
 
     const validate = () => {
@@ -174,8 +174,8 @@ document.querySelectorAll('.close').forEach(elem => {
     }
 
     if(counter===7) {
-      bgrounDiv.style.display = "none";
-      successDiv.style.display= "block";
+      divBground.style.display = "none";
+      divSuccess.style.display= "block";
       validate()
     }
        
